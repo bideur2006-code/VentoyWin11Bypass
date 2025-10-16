@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fichier de configuration pour contourner les vérifications TPM, Secure Boot et RAM
+  pendant l'installation de Windows 11 x64 via Ventoy.
+-->
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <settings pass="windowsPE">
+        <!--
+          La section "windowsPE" s'exécute pendant la phase de pré-installation (WinPE).
+          On cible ici le composant "Microsoft-Windows-Setup" pour l'architecture amd64 (x64).
+        -->
+        <component name="Microsoft-Windows-Setup"
+                   processorArchitecture="amd64"
+                   publicKeyToken="31bf3856ad364e35"
+                   language="neutral"
+                   versionScope="nonSxS"
+                   xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <!--
+              "RunSynchronous" permet d'exécuter des commandes avant le démarrage de l'installation.
+              Chaque commande est exécutée dans l'ordre défini par "Order".
+            -->
+            <RunSynchronous>
+                <!--
+                  Commande 1 : Contourne la vérification TPM
+                -->
+                <RunSynchronousCommand wcm:action="add">
+                    <Order>1</Order>
+                    <Path>cmd /c reg add HKLM\SYSTEM\Setup\LabConfig /v BypassTPMCheck /t REG_DWORD /d 1 /f</Path>
+                </RunSynchronousCommand>
+                <!--
+                  Commande 2 : Contourne la vérification Secure Boot
+                -->
+                <RunSynchronousCommand wcm:action="add">
+                    <Order>2</Order>
+                    <Path>cmd /c reg add HKLM\SYSTEM\Setup\LabConfig /v BypassSecureBootCheck /t REG_DWORD /d 1 /f</Path>
+                </RunSynchronousCommand>
+                <!--
+                  Commande 3 : Contourne la vérification RAM
+                -->
+                <RunSynchronousCommand wcm:action="add">
+                    <Order>3</Order>
+                    <Path>cmd /c reg add HKLM\SYSTEM\Setup\LabConfig /v BypassRAMCheck /t REG_DWORD /d 1 /f</Path>
+                </RunSynchronousCommand>
+            </RunSynchronous>
+        </component>
+    </settings>
+</unattend>

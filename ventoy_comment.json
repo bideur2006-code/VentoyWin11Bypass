@@ -1,0 +1,19 @@
+{
+    "control": [
+        // Active le contournement des vérifications Windows 11 par défaut
+        {
+            "VTOY_WIN11_BYPASS_CHECK": "1"
+        },
+        // Active le contournement de l'obligation de compte Microsoft
+        {
+            "VTOY_WIN11_BYPASS_NRO": "1"
+        }
+    ],
+    "auto_install": [
+        // Associe ton ISO Windows 11 x64 au fichier XML de bypass
+        {
+            "image": "/_ISO/WINDOWS/Win11_24H2_French_x64.iso",
+            "template": "/ventoy/win11_tpm_bypass.xml"
+        }
+    ]
+}
