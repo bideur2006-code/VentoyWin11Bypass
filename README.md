@@ -29,7 +29,7 @@ Ce projet fournit les fichiers nécessaires pour contourner les vérifications *
 - Copiez l'ISO de Windows 11 dans la clé Ventoy.
 
 ### 2. Ajouter les fichiers de contournement
-- Copiez **les deux fichiers** (`ventoy.json` et `bypass.xml`) **à la racine** de votre clé Ventoy.
+- Copiez **les deux fichiers** (`ventoy.json` et `win11_tpm_bypass.xml`) **à la racine** de votre clé Ventoy.
 
 ### 3. Démarrer l'installation
 - Redémarrez votre PC et boot sur la clé Ventoy.
