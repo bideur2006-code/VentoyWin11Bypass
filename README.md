@@ -18,7 +18,7 @@ Ce projet fournit les fichiers nécessaires pour contourner les vérifications *
 | Fichier | Description |
 |---------|-------------|
 | `ventoy.json` | Fichier de configuration **obligatoire** pour Ventoy. Permet de charger automatiquement le fichier de contournement. |
-| `bypass.xml` | Fichier XML de configuration pour contourner les vérifications TPM, Secure Boot et RAM. |
+| `win11_tpm_bypass.xml` | Fichier XML de configuration pour contourner les vérifications TPM, Secure Boot et RAM. |
 
 ---
 
