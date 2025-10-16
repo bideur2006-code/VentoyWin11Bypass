@@ -46,4 +46,4 @@ Ce projet fournit les fichiers nécessaires pour contourner les vérifications *
 ---
 
 ## 📜 Licence
-Ce projet est sous licence **GNU**. Vous êtes libre de l'utiliser, le modifier et le partager.
+Ce projet est sous licence **GNU GENERAL PUBLIC LICENSE**. Vous êtes libre de l'utiliser, le modifier et le partager.
