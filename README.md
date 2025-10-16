@@ -39,8 +39,6 @@ Ce projet fournit les fichiers nécessaires pour contourner les vérifications *
 ---
 
 ## ⚠️ Avertissements
-- Ce contournement est destiné à des fins de test et de compatibilité.
-- Assurez-vous que votre matériel est compatible avec Windows 11 avant de procéder à l'installation.
 - L'utilisation de ces fichiers est sous votre propre responsabilité.
 
 ---
